@@ -1,0 +1,209 @@
+\documentclass[12pt,oneside,letterpaper,english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[margin=2.25cm,headheight=26pt,includeheadfoot]{geometry}
+\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[framed, numbered]{matlab-prettifier}
+\usepackage{changepage}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{caption}
+\usepackage{tocloft}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{titling}
+\usepackage{float}
+\usepackage{comment}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage{lscape}
+\usepackage{booktabs,caption}
+\usepackage[flushleft]{threeparttable}
+\usepackage[english]{nomencl}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{datetime2}
+
+% --- set footer and header ---
+\pagestyle{fancy}
+\fancyhf{}
+
+\setlength{\parindent}{2em}
+\title{RIO Term 7 Final Report} % to reference as \title, dont use \maketitle
+\makeatletter\let\Title\@title\makeatother
+
+
+
+\lstset{language=Matlab,
+style=Matlab-editor,
+basicstyle=\normalsize\mlttfamily,
+numbers=left,
+numberstyle={\scriptsize\color{black}},	% size of the numbers
+numbersep=0.5cm											
+}
+
+\newlist{steps}{enumerate}{1}
+\setlist[steps, 1]{leftmargin=1.5cm,label = Step \arabic*:}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\rmdefault}{ptm}
+
+%\lhead{\Title}
+\rhead{\nouppercase{\rightmark}}
+\lhead{\Title}
+\rfoot{\includegraphics[height=1.5cm]{root/sutd_logo.png}} % right header logo
+\setlength\headheight{16pt}
+\setlength{\footskip}{50pt}
+\lhead{\Title} %rightH title
+\cfoot{\thepage}
+
+% --- End of page settings ---
+
+
+
+\begin{document}
+\pagenumbering{roman} 
+\input{sources/0_frontpage.tex}
+
+\newpage
+\doublespacing
+%\addcontentsline{toc}{section}{Table of Contents}
+\renewcommand{\baselinestretch}{1}\normalsize
+\tableofcontents
+\renewcommand{\baselinestretch}{1}\normalsize
+%\singlespacing
+\thispagestyle{fancy} % force page style
+
+\newpage
+\pagenumbering{arabic} 
+\fancyfoot[C]{Page \thepage\ of \pageref{EndOfText}}
+
+\section{Introduction} \label{ch1}
+\subsection{Project Background}
+\subsection{Initial Problem Statement}
+How might we design a home gym solution that offers full-body workout capabilities without compromising space or functionality, while addressing the inconvenience of public gyms due to overcrowding and travel time, to promote consistent exercise and healthier lifestyles for urban dwellers?
+
+\newpage
+\pagenumbering{Roman} 
+\section{Problem Framing}
+\subsection{Needs Finding \& Problem Reframing}
+\subsubsection{Research Methodology}
+\subsubsection{Research Findings}
+\subsection{Refined Problem Statement, Project Aim}
+\subsection{User Needs}
+
+\section{Concept Generation}
+\subsection{Solutions Concepts}
+\subsection{Three Main Solution Concepts}
+\subsection{Ideation}
+\subsection{Solution 1: <Some name>}
+\subsection{Solution 2: <Some name>}
+\subsection{Solution 3: <Some name>}
+
+\section{Concept Evaluation}
+\subsection{Pugh Matrix Evaluation}
+\subsection{Chosen solution}
+
+\section{Final Solution: <Some name>}
+\subsection{Solution Synthesis}
+\subsection{Solution Features}
+
+\section{Development Strategy}
+\subsection{Prototyping Plan}
+\subsection{Route Development}
+\subsection{Mechanical Development}
+\subsubsection{Motors (change this if necessary)}
+\subsubsection{Cameras (change this if necessary)}
+\subsubsection{Add more sections if necessary}
+\subsection{Electronic Developments}
+\subsubsection{Electronic components}
+\subsubsection{Design considerations}
+
+\subsection{Software Developments}
+The App built to support the physical home gym provides AI features that enhance the exercising experience of the user. FITTR's companion app functions as a way for us to monetize of the some features that we would be providing in the future. 
+\subsubsection{Android App architecture}
+The architecture of the app went through several design iterations to enhance not only the UI/UX but also to make the backend scalable, reliable and fault tolerant.
+\\
+UI Design Iteration 1.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/designs/UI_design_iteration1.png}
+    \caption{UI Design Iteration 1.}
+    \label{fig:UI_design_1}
+\end{figure}
+
+\\
+UI Design Iteration 2.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figures/designs/UI_design_iteration_2.1.png}
+        \caption{Design Iteration 2.1}
+        \label{fig:UI_design_2.1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figures/designs/UI_design_iteration_2.2.png}
+        \caption{Design Iteration 2.2}
+        \label{fig:UI_design_2.2}
+    \end{subfigure}
+
+    \medskip
+
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figures/designs/UI_design_iteration_2.3.png}
+        \caption{Design Iteration 2.3}
+        \label{fig:UI_design_2.3}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figures/designs/UI_design_iteration_2.4.png}
+        \caption{Design Iteration 2.4}
+        \label{fig:UI_design_2.4}
+    \end{subfigure}
+    \caption{Design Iterations}
+\end{figure}
+
+UI Design Iteration 3.
+
+Backend Design Iteration 1.
+
+Backend Design Iteration 2.
+
+
+\subsubsection{AI integration}
+\subsubsection{Video processing}
+\subsubsection{Machine Learning approach}
+\subsection{Risks and Ethical considerations}
+
+\section{Project Management}
+\subsection{Project Schedule}
+\subsubsection{Management Practice}
+\subsubsection{Review 3 (no idea what this is)}
+\subsubsection{Review 4 (also no idea)}
+\subsection{Budget Plan}
+\subsubsection{Budget Projection}
+\subsubsection{Budget Tracking}
+
+
+
+
+\newpage
+\addcontentsline{toc}{section}{References}
+\bibliography{document.bib} 
+\bibliographystyle{ieeetr}
+
+\newpage
+\section{Appendix A} \label{ch6}
+
+\label{endOfDoc}
+\end{document}
